@@ -1,30 +1,30 @@
 const fs        = require('fs')
 const Database  = require('better-sqlite3')
-const Map       = require('../schemas/Map') 
+const Proposal       = require('../schemas/Proposal') 
 
-class Maps {
+class Proposals {
     constructor () {
         try {
-            this.db = new Database('data/maps.db')
+            this.db = new Database('data/proposals.db')
 
             const createMapTable = `CREATE TABLE IF NOT EXISTS maps (
                 id VARCHAR(30) PRIMARY KEY
             );`;
             this.db.exec(createMapTable)
         } catch (err) {
-            process.dLogger.log(`in crud/Maps/constructor: ${err.message}`)
+            process.dLogger.log(`in crud/Proposals/constructor: ${err.message}`)
         }
     }
 
-    add (map) {
-        const checkExistence = this.getById(map.id)
+    add (proposal) {
+        const checkExistence = this.getById(proposal.id)
 
         if (!checkExistence) {
             let queryStr    = 'INSERT INTO maps '
             let rowNames    = ''
             let namedValues = '' 
 
-            for (let k in map._serialize()) {
+            for (let k in proposal._serialize()) {
                 rowNames    += `${k},`
                 namedValues += `@${k},`
             }
@@ -35,17 +35,17 @@ class Maps {
 
             const statement = this.db.prepare(queryStr)
 
-            statement.run(map._serialize())
+            statement.run(proposal._serialize())
         }
 
-        return map
+        return proposal
     }
 
     all () {
         const mapsRaw   = this.db.prepare('SELECT * FROM maps').all()
         const maps      = []
         for (const i in mapsRaw) 
-            maps.push(new Map(mapsRaw[i]))
+            maps.push(new Proposal(mapsRaw[i]))
 
         return maps
     }
@@ -53,7 +53,7 @@ class Maps {
     getById (id) {
         const mapRaw = this.db.prepare('SELECT * FROM maps WHERE id = ? LIMIT 1').get(id)
 
-        return mapRaw ? new Map(mapRaw) : null
+        return mapRaw ? new Proposal(mapRaw) : null
     }
 
     remove (id) {
@@ -77,4 +77,4 @@ class Maps {
     }
 }
 
-module.exports = Maps
+module.exports = Proposals

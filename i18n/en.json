@@ -28,7 +28,7 @@
     "helpText"                      : "\n**General commands**\n• `{prefix} {cmdHelp}` : send help\n• `{prefix} {cmdLatest2} {argMap}`: I will show the latest map submitted on forgehub.com.\n• `{prefix} {cmdLatest1} {argTweet}` : I'll post the latest tweet from the official @ForgeHub Twitter account.\n• `{prefix} {cmdInvite}`: get an link to invite this bot to your own servers. \n**Admin commands**\n• `{prefix} {cmdPrefix} new-prefix`: change the prefix used to call the bot.\n• `{prefix} {cmdUninstall}`: the bot will delete everything it stored about this Discord server and will leave it.\n\nTo ask questions to the developpers of this bot, feel free to contact us at {discordInvite} !",
     "helpTitle"                     : "Help for ForgeHub's unofficial bot!",
     "inviteCmdText"                 : "You can add the ForgeHub bot to your own Discord server by using this link: {link}",
-    "mapType"                       : "Map type", 
+    "mapType"                       : "Proposal type", 
     "nbComments"                    : "comment | comments", 
     "nbDownloads"                   : "download | downloads",
     "nbViews"                       : "view | views", 

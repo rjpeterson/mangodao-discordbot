@@ -70,7 +70,7 @@ class MainCommands {
         message.channel.send(generateEmbed({
             color       : '#43b581',
             description, 
-            footer      : 'made with ♥️ by Halo Création',
+            footer      : 'made with ♥️ by rjpeterson & Halo Création',
             thumbnail   : 'https://www.forgehub.com/styles/forgehub/forgehub/favicon.png',
             title       : this.$t.get('helpTitle')
         }))
@@ -83,7 +83,7 @@ class MainCommands {
     latest (message, args) {
         switch(args.trim().toLowerCase()) {
             case this.$t.get('argMap'):
-                new Website(message.client, false).getLatestMap(message)
+                new Website(message.client, false).getLatestProposal(message)
                 break
             case this.$t.get('argTweet'):
                 Twitter.getLatestTweet(message)

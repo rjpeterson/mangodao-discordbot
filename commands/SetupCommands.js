@@ -190,7 +190,7 @@ class SetupCommands {
     _step1 (message) {
         message.channel.send(generateEmbed({
             title       : 'FIRST STEP',
-            description : `Welcome to the **unofficial ForgeHub bot** installation wizard! First things first, please select in reaction to this message the bot's language for this server:\n• 🇺🇸 English (USA)\n• 🇫🇷 Français (France)`,
+            description : `Welcome to the **unofficial MangoDao bot** installation wizard! First things first, please select in reaction to this message the bot's language for this server:\n• 🇺🇸 English (USA)\n• 🇫🇷 Français (France)`,
             thumbnail   : 'https://www.forgehub.com/styles/forgehub/forgehub/favicon.png'
         }))
             .then(async msg => {

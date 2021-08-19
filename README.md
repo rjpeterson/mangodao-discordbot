@@ -1,4 +1,4 @@
-<h1 align="center">Unofficial ForgeHub Discord Bot ⚒️</h1>
+<h1 align="center">Unofficial MangoDao Discord Bot ⚒️</h1>
 <p align="center">
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/node-%3E%3D12.16.1-blue.svg" />
@@ -16,7 +16,7 @@
   </a>
 </p>
 
-> A Discord bot that automatically fetches latest map submissions on forgehub.com, latest FH's tweets, and alerts whenever FH goes live on Twitch! 
+> A Discord bot that automatically fetches latest proposal submissions on dao.mango.markets and the latest Mango Markets tweets! 
 
 ## Prerequisites
 
@@ -70,8 +70,8 @@ Use the command `!fh help` (or `!fh aide` in French) to get the full list of ava
 
 **General commands**
 * `!fh help` : send help
-* `!fh latest map`: I will show the latest map submitted on forgehub.com.
-* `!fh latest tweet` : I'll post the latest tweet from the official @ForgeHub Twitter account.
+* `!fh latest proposal`: I will show the latest proposal submitted on dao.mango.markets.
+* `!fh latest tweet` : I'll post the latest tweet from the official @mangomarkets Twitter account.
 * `!fh invite`: get an link to invite this bot to your own servers. 
 
 **Admin commands**

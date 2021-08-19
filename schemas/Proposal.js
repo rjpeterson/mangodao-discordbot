@@ -1,4 +1,4 @@
-class Map {
+class Proposal {
     constructor (args) {
         this.id = args.id 
         // for now, only storing the id, may change later if needed
@@ -12,4 +12,4 @@ class Map {
     }
 }
 
-module.exports = Map
+module.exports = Proposal
